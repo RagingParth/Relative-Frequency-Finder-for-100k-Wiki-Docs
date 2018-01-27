@@ -1,0 +1,18 @@
+Commands:-
+
+To create Class files:-
+javac -classpath ${HADOOP_CLASSPATH} *.java
+
+To create Jar file:-
+jar -xvf RelFreq.jar *.class
+
+To run on HDFS:-
+hdfs dfs -mkdir /MyFolder
+hdfs dfs -put RelFreq.jar /MyFolder
+hdfs dfs -mkdir /MyFolder/input
+hdfs dfs -put WikiText /MyFolder/input
+
+To execute on Hadoop:-
+bin/hadoop jar RelFreq.jar RelFreqDriver /MyFolder/input /MyFolder/output
+
+You can find the output in the output folder

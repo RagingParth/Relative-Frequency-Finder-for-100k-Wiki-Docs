@@ -1,0 +1,31 @@
+Input/Output Formats:-
+
+Mapper1:-
+Input Key- LongWritable
+Input Value- Text
+Output Key- AdjacentWord
+Output Value- IntWritable
+
+Reducer1:-
+Input Key- AdjacentWord
+Input Value- IntWritable
+Output Key- AdjacentWord
+Output Value- DoubleWritable
+
+Mapper2:-
+Input Key- Object
+Input Value- Text
+Output Key- DoubleWritable
+Output Value- AdjacentWord
+
+Reducer2:-
+Input Key- DoubleWritable
+Input Value- AdjacentWord
+Output Key- AdjacentWord
+Output Value- DoubleWritable
+
+
+
+Running Time:-
+Pseudo-Distributed Mode:- (Ubuntu AWS EC2 instance t2.micro- 7min 21sec)
+Fully-Distributed Mode:- (Ubuntu 2 AWS EC2 instances t2.micro- 7min 5sec)
